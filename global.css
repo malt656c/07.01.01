@@ -1,0 +1,67 @@
+/* normalisering og variabler */
+@import url(https://use.typekit.net/nji0znj.css);
+:root {
+  --custom_black: #070707;
+  --custom_white: #fafafa;
+  --custom_orange: #e97c00;
+  --standard_padding: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body {
+    min-height: 100dvh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    overflow-inline: hidden;
+    background-color: var(--custom_white);
+  }
+/* normalisering og variabler */
+
+/* logo */
+.logo {
+  font-family: sneakers-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  color: var(--custom_white);
+}
+.logo span{
+    color: var(--custom_orange);
+font-size: 2.8rem;
+display: inline-block;
+transform: scaleX(-1) translate(0.3rem, 0.35rem) rotateZ(7deg);
+letter-spacing: 0.4rem;
+}
+.logo a{
+    color: inherit;
+}
+/* logo */
+
+/* header */
+header{
+    display: grid;
+    place-items: center;
+    background-color: var(--custom_black);
+}
+/* header */
+
+/* footer */
+footer{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: var(--custom_white);
+    display: grid;
+    place-items: center;
+    background-color: var(--custom_black);
+}
+/* footer */
