@@ -19,5 +19,3 @@ function showProduct(productData) {
     gallery.appendChild(product_card_clone);
   });
 }
-
-getProduct();
