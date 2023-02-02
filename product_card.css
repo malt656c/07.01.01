@@ -1,7 +1,12 @@
+main{
+  display: grid;
+  place-content: center;
+}
 .productlist {
   display: grid;
   padding: var(--standard_padding);
-  place-items: center;
+  max-width:max-content;
+  gap: var(--standard_padding);
 }
 .product_card {
   margin-top: var(--standard_padding);
@@ -15,6 +20,7 @@
   font-weight: 400;
   font-style: normal;
   color: var(--custom_white);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15); 
 }
 .product_card_info{
   padding-inline: var(--standard_padding);
@@ -73,6 +79,7 @@ a{
 }
 @media (min-width: 1300px) {
   .productlist {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-evenly;
   }
 }
