@@ -60,7 +60,7 @@ main{
   content: "-";
 }
 .discount::after {
-  content: ",-";
+  content: "%";
 }
 .price::after {
   content: ",00 kr.";
@@ -72,8 +72,13 @@ a{
   color: inherit;
   text-decoration: underline;
 }
+.soldout :is(img, div){
+  filter: opacity(80%) saturate(50%);
+  backdrop-filter: opacity(80%) saturate(50%);
+}
 .soldout::before{
   content: 'udsolgt';
+  z-index: 100;
   background-color: crimson;
   font-size: 1.5rem;
   max-width: fit-content;
@@ -81,8 +86,9 @@ a{
   position: absolute;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
   top: calc(var(--standard_padding)*2);
-
+  filter: unset;
 }
+
 @media (min-width: 900px) {
   .productlist {
     grid-template-columns: repeat(2, 1fr);
