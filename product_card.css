@@ -72,6 +72,17 @@ a{
   color: inherit;
   text-decoration: underline;
 }
+.soldout::before{
+  content: 'udsolgt';
+  background-color: crimson;
+  font-size: 1.5rem;
+  max-width: fit-content;
+  padding: var(--standard_padding);
+  position: absolute;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  top: calc(var(--standard_padding)*2);
+
+}
 @media (min-width: 900px) {
   .productlist {
     grid-template-columns: repeat(2, 1fr);

@@ -15,7 +15,9 @@ function showProduct(productData) {
     product_card_clone.querySelector(".brand").textContent = product.brandname;
     product_card_clone.querySelector(".name").textContent = product.productdisplayname;
     product_card_clone.querySelector(".price").textContent = product.price - product.discount;
-
+    if(product.soldout>0){
+      product_card_clone.querySelector(".product_card").classList.add("soldout")
+    }
     gallery.appendChild(product_card_clone);
   });
 }
