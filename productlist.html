@@ -16,6 +16,29 @@
       </div>
     </header>
     <main>
+      <div id="filterOptions">
+        <div class="productsShown">
+          <label for="productsShown">Products per page</label>
+          <select name="productsShown" id="productsShown">
+            <option value="12">12</option>
+            <option value="24">24</option>
+            <option value="36">36</option>
+          </select>
+        </div>
+        <div class="categorySelector">
+          <label for="categorySelector">Product category</label>
+          <select name="categorySelector" id="categorySelector">
+            <option value="null">All</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Apparel">Apparel</option>
+            <option value="Footwear">Footwear</option>
+            <option value="Free Items">Free Items</option>
+            <option value="Personal Care">Personal Care</option>
+            <option value="Sporting Goods">Sporting Goods</option>
+          </select>
+        </div>
+        
+      </div>
       <div class="productlist">
         <!-- product Template -->
         <template id="product_card_template">
@@ -35,6 +58,11 @@
             </div>
           </article>
         </template>
+      </div>
+      <div id="pageSelector">
+        <input type="button" value="⬅" id="prevPage">
+        <input id="pageNumber" value=""></input>
+        <input type="button" value="➡" id="nextPage">
       </div>
     </main>
     <footer><h2>Malte H. R. Jensen</h2></footer>
