@@ -1,4 +1,4 @@
-const productDataBase = `https://kea-alt-del.dk/t7/api/products/?limit=100`;
+const productDataBase = `https://kea-alt-del.dk/t7/api/products/?limit=10`;
 
 fetch(productDataBase)
   .then((res) => res.json())
@@ -15,9 +15,14 @@ function showProduct(productData) {
     product_card_clone.querySelector("img").alt = product.productdisplayname;
     product_card_clone.querySelector(".brand").textContent = product.brandname;
     product_card_clone.querySelector(".name").textContent = product.productdisplayname;
-    product_card_clone.querySelector(".price").textContent = Math.floor(product.price - (product.price / 100) * product.discount);
+    product_card_clone.querySelector(".price").textContent = product.price;
+    product_card_clone.querySelector("a").href = `product.html?id=${product.id}`
     if (product.soldout > 0) {
       product_card_clone.querySelector(".product_card").classList.add("soldout");
+    }
+    if (product.discount > 0) {
+      product_card_clone.querySelector(".discountedPrice").textContent = Math.floor(product.price - (product.price / 100) * product.discount);
+      product_card_clone.querySelector(".price").style.textDecoration = "line-through 3px red"
     }
     gallery.appendChild(product_card_clone);
   });

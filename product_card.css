@@ -62,10 +62,10 @@ main{
 .discount::after {
   content: "%";
 }
-.price::after {
+.price::after, .discountedPrice::after {
   content: ",00 kr.";
 }
-.discount:empty {
+.discount:empty, .discountedPrice:empty {
   display: none;
 }
 a{
